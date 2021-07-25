@@ -1,11 +1,52 @@
-body {
-  margin: 0;
-  font-family: "Inter", sans-serif;
+/* resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* -- */
+
+:root {
+  --gray-0: #000000;
+  --gray-24: #3d3d3d;
+  --gray-88: #dfdfdf;
+  --white: #ffffff;
+
+  --primary: #00a870;
+  --secondary: #5e20a4;
+
+  --bk: #faf9f7;
+  --overlay: #c86dd7, #7e49c3, #5912ac;
+
+  --site-width: 1184px;
+}
+
+html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-family: "Inter", sans-serif;
   font-weight: 400;
+  font-size: 16px;
+  color: var(--gray-24);
+
+  background-color: var(--bk);
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  line-height: 1.75;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: inherit;
 }
