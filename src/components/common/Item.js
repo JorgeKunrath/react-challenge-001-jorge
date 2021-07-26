@@ -1,27 +1,40 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
+import theme from "../../theme";
+
+function get(obj, key) {
+  return function (props) {
+    return props[obj][key];
+  };
+}
+
+function isHide(size) {
+  return function (props) {
+    return get("$hide", size)(props) ? "display: none" : "";
+  };
+}
 
 const Wrapper = styled.div`
   grid-column: var(--col);
   grid-row: var(--row);
 
-  @media (max-width: 767px) {
-    --col: ${({ $col }) => $col.s};
-    --row: ${({ $row }) => $row.s};
-    ${({ $hide }) => $hide.s && "display: none"}
+  @media (max-width: ${theme.size.m - 1}px) {
+    --col: ${get("$col", "s")};
+    --row: ${get("$row", "s")};
+    ${isHide("s")};
   }
-  @media (min-width: 768px) and (max-width: 1367px) {
-    --col: ${({ $col }) => $col.m};
-    --row: ${({ $row }) => $row.m};
-    ${({ $hide }) => $hide.m && "display: none"}
+  @media (min-width: ${theme.size.m}px) and (max-width: ${theme.size.l - 1}px) {
+    --col: ${get("$col", "m")};
+    --row: ${get("$row", "m")};
+    ${isHide("m")};
   }
-  @media (min-width: 1368px) {
-    --col: ${({ $col }) => $col.l};
-    --row: ${({ $row }) => $row.l};
-    ${({ $hide }) => $hide.l && "display: none"}
+  @media (min-width: ${theme.size.l}px) {
+    --col: ${get("$col", "l")};
+    --row: ${get("$row", "l")};
+    ${isHide("l")};
   }
 `;
 
-function _getSizes(list) {
+function getSizes(list) {
   return function (size) {
     return list
       .find((s) => s[0] === size)
@@ -42,14 +55,15 @@ function _getSizes(list) {
  * @param {*} col {string}
  * @param {*} row {string}
  * @param {*} hide {string}
+ * @param {*} rest {any} will be passed to styled component
  *
- * @example <Item col="s1-3 m4" row="s1-3 m3" hide="m l">
+ * @example <Item col="s1-3 m4" row="s1-3 m3" hide="m l" as="img">
  *
  * @returns
  */
 export default function Item({ children, col, row, hide, ...rest }) {
-  const findCol = _getSizes(col?.split(" ") || []);
-  const findRow = _getSizes(row?.split(" ") || []);
+  const findCol = getSizes(col?.split(" ") || []);
+  const findRow = getSizes(row?.split(" ") || []);
 
   const cols = {
     s: findCol("s"),

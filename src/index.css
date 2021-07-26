@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
 img {
   max-width: 100%;
 }
@@ -38,15 +42,28 @@ html {
   background-color: var(--bk);
 }
 
-body {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.142;
 }
 
 p {
   line-height: 1.75;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: inherit;
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  border-bottom: 1px solid;
 }
