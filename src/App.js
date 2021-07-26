@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Container from "./components/common/Container";
 import Item from "./components/common/Item";
+import Spacer from "./components/common/Spacer";
 
 const Wrapper = styled.div`
   > * {
@@ -28,27 +29,28 @@ function App() {
         </Item>
       </Container> */}
 
-      {/* TODO: REFINAR BREAKPOINT. TÁ QUEBRANDO ANTES MESMO DE COMEÇAR A DIMINUIR O TAMANHO ÚTIL (container queries venham logooo) */}
-
       <Container as="section" style={{ alignItems: "center" }}>
         <Item col="s1-5 m1-4 l2-7" row="s2">
           <h2>Share your home, nanny and costs</h2>
+          <Spacer axis="y" size="1rem" when={{ m: "1.5rem", l: "2.5rem" }} />
           <p>
             You have a fantastic home, a fantastic nanny and wouldn’t cutting your costs in half be,
             well, fantastic?! If only it was easy to connect with other parents to share your costs?
-            Well now it is, with Hapu. <a href="#">Hapu means tribe</a> and it’s our foundational 3
-            tribal principles that empowers you to create and manage your own tribe. A tribe that
-            together has the power to create new affordable solutions in childcare that work for you
-            and your community.
+            Well now it is, with Hapu. <a href="#demo">Hapu means tribe</a> and it’s our
+            foundational 3 tribal principles that empowers you to create and manage your own tribe.
+            A tribe that together has the power to create new affordable solutions in childcare that
+            work for you and your community.
           </p>
-          <a href="#">Ready to get started?</a>
+          <Spacer axis="y" size="1.5rem" when={{ l: "2.5rem" }} />
+          <a href="#demo">Ready to get started?</a>
         </Item>
-        <Item col="s1-5 m4-7 l7-13" row="s1">
-          <img
-            src="https://www.madrecor.com.br/wp-content/uploads/2016/10/orionthemes-placeholder-image.jpg"
-            alt=""
-          />
-        </Item>
+        <Item
+          col="s1-5 m4-7 l7-13"
+          row="s1"
+          as="img"
+          src="https://www.madrecor.com.br/wp-content/uploads/2016/10/orionthemes-placeholder-image.jpg"
+          alt=""
+        ></Item>
       </Container>
 
       <div>faixa de disponibilidade</div>
