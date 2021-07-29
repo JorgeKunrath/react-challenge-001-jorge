@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/react-challenge-001-jorge/static/css/main.59d242b1.chunk.css",
+    "main.js": "/react-challenge-001-jorge/static/js/main.4c142b2a.chunk.js",
+    "main.js.map": "/react-challenge-001-jorge/static/js/main.4c142b2a.chunk.js.map",
+    "runtime-main.js": "/react-challenge-001-jorge/static/js/runtime-main.d371e96b.js",
+    "runtime-main.js.map": "/react-challenge-001-jorge/static/js/runtime-main.d371e96b.js.map",
+    "static/js/2.bcdf5c63.chunk.js": "/react-challenge-001-jorge/static/js/2.bcdf5c63.chunk.js",
+    "static/js/2.bcdf5c63.chunk.js.map": "/react-challenge-001-jorge/static/js/2.bcdf5c63.chunk.js.map",
+    "index.html": "/react-challenge-001-jorge/index.html",
+    "static/css/main.59d242b1.chunk.css.map": "/react-challenge-001-jorge/static/css/main.59d242b1.chunk.css.map",
+    "static/js/2.bcdf5c63.chunk.js.LICENSE.txt": "/react-challenge-001-jorge/static/js/2.bcdf5c63.chunk.js.LICENSE.txt",
+    "static/media/hero-bk-desktop.f3928697.png": "/react-challenge-001-jorge/static/media/hero-bk-desktop.f3928697.png",
+    "static/media/hero-bk-mobile.47481e5d.png": "/react-challenge-001-jorge/static/media/hero-bk-mobile.47481e5d.png",
+    "static/media/image-featured-hero.0db76a33.png": "/react-challenge-001-jorge/static/media/image-featured-hero.0db76a33.png",
+    "static/media/image-section1-big.52e60fcf.png": "/react-challenge-001-jorge/static/media/image-section1-big.52e60fcf.png",
+    "static/media/image-section1.3b06eff4.png": "/react-challenge-001-jorge/static/media/image-section1.3b06eff4.png",
+    "static/media/image-section3-big.3d4cb277.png": "/react-challenge-001-jorge/static/media/image-section3-big.3d4cb277.png",
+    "static/media/image-section4.337ede4e.png": "/react-challenge-001-jorge/static/media/image-section4.337ede4e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d371e96b.js",
+    "static/js/2.bcdf5c63.chunk.js",
+    "static/css/main.59d242b1.chunk.css",
+    "static/js/main.4c142b2a.chunk.js"
+  ]
+}

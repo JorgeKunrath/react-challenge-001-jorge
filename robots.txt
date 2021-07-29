@@ -1,0 +1,4 @@
+# Intentionally blocking searches because this is a demo project
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /
