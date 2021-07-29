@@ -8,6 +8,10 @@ By Jorge Kunrath, July 2021.
 
 In the project directory, you can run:
 
+### `npm install` or `pnpm install`
+
+before start, install all of the dependencies.
+
 ### `npm start` or `pnpm start`
 
 Runs the app in the development mode.\
@@ -23,6 +27,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ## Deploy
 
-Deploy is automatic with GitHub Actions and GitHub Pages.\
-Just commit to `main` and it will trigger.
-Available at https://jorgekunrath.github.io/react-challenge-001-jorge/
+Deploy is automated with GitHub Actions and GitHub Pages.\
+Just commit to `main` branc and it will trigger.
+
+Site available at https://jorgekunrath.github.io/react-challenge-001-jorge/
