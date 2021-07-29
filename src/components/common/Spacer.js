@@ -19,11 +19,11 @@ const Spacer = styled.span`
 
   --width: ${getSize("x")};
   --height: ${getSize("y")};
-  @media (min-width: ${theme.size.m}px) {
+  @media (min-width: ${theme.size.m}) {
     --width: ${getSize("x", "m")};
     --height: ${getSize("y", "m")};
   }
-  @media (min-width: ${theme.size.l}px) {
+  @media (min-width: ${theme.size.l}) {
     --width: ${getSize("x", "l")};
     --height: ${getSize("y", "l")};
   }

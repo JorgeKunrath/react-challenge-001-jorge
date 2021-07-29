@@ -17,17 +17,17 @@ const Wrapper = styled.div`
   grid-column: var(--col);
   grid-row: var(--row);
 
-  @media (max-width: ${theme.size.m - 1}px) {
+  @media not all and (min-width: ${theme.size.m}) {
     --col: ${get("$col", "s")};
     --row: ${get("$row", "s")};
     ${isHide("s")};
   }
-  @media (min-width: ${theme.size.m}px) and (max-width: ${theme.size.l - 1}px) {
+  @media (min-width: ${theme.size.m}) {
     --col: ${get("$col", "m")};
     --row: ${get("$row", "m")};
     ${isHide("m")};
   }
-  @media (min-width: ${theme.size.l}px) {
+  @media (min-width: ${theme.size.l}) {
     --col: ${get("$col", "l")};
     --row: ${get("$row", "l")};
     ${isHide("l")};

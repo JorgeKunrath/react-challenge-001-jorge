@@ -1,7 +1,7 @@
 const theme = {
   size: {
-    m: 768,
-    l: 1024,
+    m: "768px",
+    l: "1024px",
   },
 };
 
