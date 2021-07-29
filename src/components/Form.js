@@ -8,6 +8,16 @@ const Form = styled.form`
   flex-direction: column;
   font-size: 0.9rem;
 
+  /* sr-only */
+  label {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
   input {
     min-width: 20%;
     font: inherit;
@@ -141,16 +151,20 @@ export default function FormComponent({ abValue }) {
   return (
     <>
       <Form onSubmit={handleSubmit}>
+        <label htmlFor="name">Name</label>
         <input
           ref={nameRef}
+          id="name"
           type="text"
           placeholder="Your name"
           required
           autoComplete="name"
           onChange={() => setStatus("idle")}
         />
+        <label htmlFor="email">Email</label>
         <input
           ref={emailRef}
+          id="email"
           type="email"
           placeholder="Your email"
           required
